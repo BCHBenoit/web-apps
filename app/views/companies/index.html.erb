@@ -1,0 +1,14 @@
+<%
+companies = Company.all
+
+%>
+
+<h1> Companies </h1>
+
+<ul>
+  <%companies_row = 0%>
+
+  <%for companies_row in companies%>
+    <li> <%=companies_row["name"]%></li>
+  <%end%>
+</ul>
