@@ -1,11 +1,18 @@
 <% contacts = Contact.all%>
+<% companies = Company.all%>
 
 <h1> Contacts </h1>
 
 <ul>
 
   <% contacts_row = 0%>
+  <% companies_row = 0%>
+  <% company_id = 0%>
   <%for contacts_row in contacts %>
+    <% company_id = contacts_row["company_id"]%>
+    <%for companies_row in companies%>
+      
+   
     <li> <%=contacts_row["first_name"]%> <%=contacts_row["last_name"]%> </li>
   <%end%>
 
