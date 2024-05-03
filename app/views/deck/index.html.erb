@@ -1,0 +1,26 @@
+<% numeros = [2, 3, 4, 5, 6, 7, 8, 9, 10, "jack", "1ueen", "king", "ace"]%>
+<% palos = "clubs", "diamonds", "hearts", "spades"%>
+
+<% deck = []%>
+<% numeros_row = 0%>
+<% palos_row = 0%>
+
+<%for numeros_row in numeros%>
+  <% for palos_row in palos%>
+    <%carta = "{numeros_row}_of_{palos_row}"%>
+    <% deck.push(carta)%>
+  <% end%>
+<%end%>
+
+<%shuffled_deck = deck.shuffle%>
+<%hand = shuffled_deck[0,5]%>
+
+<%carta_elegida = 0%>
+
+<%for carta_elegida in hand%>
+  <%= carta_elegida%>
+<%end%>
+
+<p>
+<a href = "/deck"> Deal again </a>
+</p>
