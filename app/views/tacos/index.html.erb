@@ -1,0 +1,14 @@
+<h1> I love tacos!</h1>
+<% carnes = ["carnitas", "chicken", "fish", "steak"]%>
+
+<p>There are <%=carnes.length%> kinds of tacos:</p>
+
+
+<%carnes_row = 0%>
+
+<ul>
+  <%for carnes_row in carnes%>
+      <li><%=carnes_row%></li>
+    <%end%>
+</ul>
+
