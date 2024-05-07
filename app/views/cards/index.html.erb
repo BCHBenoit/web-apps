@@ -9,7 +9,7 @@ row_numeros = 0
 card = 0
 for row_palos in palos
   for row_numeros in numeros
-    card = "#{row_palos}_of_#{row_numeros}"
+    card = "#{row_numeros}_of_#{row_palos}"
     deck.push(card)
   end
 end
@@ -20,7 +20,7 @@ end
 
 <%mezclar_deck = deck.shuffle%>
 
-<%= mezclar_deck%>
+
 
 <%
 carta_elegida = 0
@@ -30,7 +30,7 @@ contador = 0
 <%for carta_elegida in mezclar_deck%>
   <%= carta_elegida%>
   <%contador = contador + 1%>
-  <% if contador == 4
-      exit
+  <% if contador == 5
+      break
     end%>
 <%end%>
