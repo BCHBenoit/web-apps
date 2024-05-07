@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources "contacts"
   resources "cards"
   resources "companies2"
+  resources "contacts2"
 end
