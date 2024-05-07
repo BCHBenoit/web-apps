@@ -16,11 +16,12 @@ end
 %>
 
 
-<!--<h1><%= "#{deck[0]}, #{deck[1]}"%></h1> -->
+<!--<h1><%= "#{deck[0]}, #{deck[1]}"%></h1>-->
+<!--<p> <%= deck%></p>-->
 
 <%mezclar_deck = deck.shuffle%>
 
-<!--<%= mezclar_deck%> -->
+<!--<%= mezclar_deck%>-->
 
 <%
 carta_elegida = 0
@@ -29,8 +30,13 @@ contador = 0
 
 <%for carta_elegida in mezclar_deck%>
   <%= carta_elegida%>
+  <img src = "images/cards/<%=carta_elegida%>.svg">
   <%contador = contador + 1%>
   <% if contador == 5
       break
     end%>
 <%end%>
+
+<p>
+<a href = "/cards">Deal again</a>
+</p>
