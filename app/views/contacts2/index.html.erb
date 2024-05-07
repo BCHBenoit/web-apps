@@ -4,11 +4,14 @@
 
 <%contacts_row = 0%>
 <%companies_row = 0%>
+<%companies_name = 0%>
 <% get_company_id = 0%>
 
 <ul>
   <% for contacts_row in contacts%>
     <% get_company_id = contacts_row["id"]%>
-    <li><%= contacts_row["first_name"]%> - <%= contacts_row["last_name"]%> - <%= contacts_row["first_name"]%> - <%= contacts_row["phone_number"]%> - <%= companies_row["id"]%></li>
+    <% companies_row = companies.find_by({"id" => get_company_id})%>
+    <% companies_name = companies_row["name"]%>
+    <li><%= contacts_row["first_name"]%> - <%= contacts_row["last_name"]%> - <%= companies_name%></li>
   <% end%>
 </ul>
