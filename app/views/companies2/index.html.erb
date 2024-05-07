@@ -1,0 +1,17 @@
+<h1> Companies</h1>
+
+<%companies = Company.all%>
+
+<ul>
+  <% 
+  company_row = 0
+  company_name = 0
+  company_state = 0
+  %>
+
+  <%for company_row in companies%>
+    <%company_name = company_row["name"]%>
+    <%company_state = company_row["state"]%>
+    <li><%=company_name%> - <%=company_state%></li>
+  <%end%>
+</ul>
